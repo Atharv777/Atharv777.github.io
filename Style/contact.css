@@ -1,0 +1,211 @@
+/* Navigation Bar */
+#navbar {
+  	display: flex;
+  	align-items: center;
+	position: relative;
+	top: 0px;
+}
+
+#navbar::before {
+	content: "";
+	background: transparent;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+#navbar ul {
+	display: flex;
+	list-style: none;
+}
+
+#right {
+	position: relative;
+	left: 650px;
+}
+
+#left {
+	position: relative;
+	left: 500px;
+}
+
+.left-item {
+	float: left;
+	color: black;
+	display: block;
+	padding: 3px 22px;
+	border-radius: 20px;
+	text-decoration: none;
+	font-size: 22px;
+	font-family: "copperplate gothic";
+	font-weight: bold;
+}
+
+.right-item a {
+	color: white;
+	display: block;
+	padding: 3px 22px;
+	border-radius: 20px;
+	text-decoration: none;
+	font-size: 12.5px;
+	font-family: "copperplate gothic";
+	font-weight: bold;
+}
+
+.right-item a:hover {
+  	color: black;
+}
+
+#home {
+	display: flex;
+	flex-direction: column;
+	padding: 160px 200px 25px;
+	height: 300px;
+	justify-content: center;
+	align-items: center;
+}
+
+#home::before {
+	content: "";
+	position: absolute;
+	background: url("../img/contact.jpg") no-repeat center center/cover;
+	height: 500px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: -1;
+	opacity: 0.8;
+}
+
+#home h1 {
+	color: black;
+	text-align: center;
+	font-family: "Arial rounded MT";
+	font-size: 100px;
+}
+
+#home p {
+	color: black;
+	text-align: center;
+	font-family: Arial;
+	position: relative;
+	top: -80px;
+}
+
+form{
+    width: 750px;
+    margin: auto;
+}
+
+/* #name{
+    border: 1px solid grey;
+} */
+
+.inp{
+    width: 750px;
+    border: 1px solid lightgray;
+    color: grey;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.error{
+    width: 200px;
+    margin-left: 40px;
+    position: relative;
+    top: -35px;
+    color: red;
+    font-family: centaur;
+    font-weight: bold;
+}
+
+.span{
+    margin-left: 20px;
+    color: red;
+    font-family: centaur;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#btn {
+	padding: 15px 22.5px;
+	background-color: rgb(20, 132, 184);
+	color: white;
+	font-weight: bold;
+	font-family: "franklin gothic";
+	letter-spacing: 1px;
+	margin-left: 20px;
+}
+
+form hr{
+    position: relative;
+    top: -35px;
+}
+
+#hr {
+    color: white;
+}
+
+#ico-twitter {
+	background-color: black;
+	position: absolute;
+	padding: 10px 12px;
+	border-radius: 50px;
+}
+
+#ico-face {
+	background-color: black;
+	position: absolute;
+	padding: 10px 12px;
+	border-radius: 50px;
+	margin-left: 60px;
+}
+
+#ico-git {
+  	background-color: black;
+	position: absolute;
+	padding: 10px 11px;
+	border-radius: 50px;
+	margin-left: 120px;
+}
+
+#social img {
+  	width: 20px;
+}
+
+#ico-twitter:hover {
+	transition-property: all;
+	transition-duration: 0.5s;
+	background-color: rgb(20, 132, 184);
+}
+
+#ico-face:hover {
+	transition-property: all;
+	transition-duration: 0.5s;
+	background-color: rgb(20, 132, 184);
+}
+
+#ico-git:hover {
+	transition-property: all;
+	transition-duration: 0.4s;
+	background-color: rgb(20, 132, 184);
+}
+
+#social {
+	width: 165px;
+	height: 50px;
+	margin-left: 108px;
+	margin: auto;
+	padding: 60px 0px;
+}
+
+footer{
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 5px;
+	margin: 0;
+}

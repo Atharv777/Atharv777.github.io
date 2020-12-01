@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clean blog -Atharv</title>
+    <link rel="stylesheet" href="Style/contact.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul id="left">
+            <li class="left-item">Atharv</li>
+        </ul>
+
+        <ul id="right">
+            <li class="right-item"><a href="index.html">HOME</a></li>
+            <li class="right-item"><a href="#">ABOUT</a></li>
+            <li class="right-item"><a href="#">SAMPLE POST</a></li>
+            <li class="right-item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Contact Me</h1>
+        <p>Have questions? I have answers.</p>
+    </section>
+
+    <form action="" name="cform" onsubmit="return validateForm()">
+        <div class="formdsgn" id="name">
+            <input class="inp" type="text" name="fname" placeholder="ENTER YOUR NAME">
+            
+            <div>
+                <span class="span" id="namespn"></span><div class="error"></div>
+                <hr id="hr">
+            </div>
+        </div>
+
+
+        <div class="formdsgn" id="email">
+            <input class="inp" type="email" name="femail" placeholder="ENTER YOUR EMAIL">
+
+            <div>
+                <span class="span" id="emailspn"></span><div class="error"></div>
+                <hr id="hr">
+            </div>
+        </div>
+
+
+        <div class="formdsgn" id="phone">
+            <input class="inp" type="text" name="fphone" placeholder="ENTER YOUR PHONE NO.">
+
+            <div>
+                <span class="span" id="phonespn"></span><div class="error"></div>
+                <hr id="hr">
+            </div>
+        </div>
+
+
+        <div class="formdsgn" id="msg">
+            <input class="inp" type="text" name="fmsg" placeholder="ENTER YOUR MESSAGE">
+
+            <div>
+                <span class="span" id="msgspn"></span><div class="error"></div>
+                <hr id="hr">
+            </div>
+        </div>
+
+        <input id="btn" type="submit" value="SEND">
+    </form>
+
+    <hr id="hr"> 
+
+    <div id="social">
+        <div id="ico-twitter">
+            <img src="img/twitter.png" alt="TWITTER">
+        </div>
+
+        <div id="ico-face">
+            <img src="img/facebook.png" alt="FACEBOOK">
+        </div>
+
+        <div id="ico-git">
+            <img src="img/git.png" alt="GITHUB">
+        </div>
+    </div>
+
+    <footer>Copyright © Clean blog 2019</footer>
+
+    <script>
+        function setError(error, id) {
+            dot = document.getElementById(`${id}spn`)
+            element = document.getElementById(id);
+
+            dot.innerHTML = '·'
+            element.getElementsByClassName('error')[0].innerHTML = error
+        } 
+
+        function validateForm(params) {
+            let state = true
+
+            let name = document.forms['cform']['fname'].value;
+            let email = document.forms['cform']['femail'].value;
+            let phone = document.forms['cform']['fphone'].value;
+            let msg = document.forms['cform']['fmsg'].value;
+
+
+            if (name.length<=3) {
+                setError("Name is too short", 'name')
+                state = false
+            }
+
+            if (phone.type == 'str') {
+                setError("Invalid phone number", 'phone')
+                state = false
+            }
+
+            if (name.length==0) {
+                setError("This field is mandatory", 'name')
+                state = false
+            }
+
+            if (phone.length==0) {
+                setError("This field is mandatory", 'phone')
+                state = false
+            }
+            
+            if (email.length==0) {
+                setError("This field is mandatory", 'email')
+                state = false
+            }
+            
+            if (msg.length==0) {
+                setError("Brifly describe your question.", 'msg')
+                state = false
+            }
+
+            return state
+        }
+    </script>
+</body>
+
+</html>
